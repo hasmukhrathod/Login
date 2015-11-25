@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body,html {
+ margin:5px;
+ padding:0;
+ color:#000;
+ /*background:#a7a09a; */
+}
+
+#wrap {
+ /*width:750px; */
+ width:100%;
+ margin:0 auto;
+ background-color: #f0f0f0;
+/* background:#99c; */
+}
+
+    #header {
+    padding:5px 10px;
+    background:#ddd;
+    }
+    #nav {
+    padding:5px 10px;
+    background:#c99;
+    }
+    
+    #footer {
+    clear:both;
+    padding:5px 10px;
+    background:#cc9;
+    }
+
+
+    #main {
+    float:left;
+  /*  width:500px; */
+    width:20%;
+    padding:0;
+    background-color: #f0f0f0;
+   /* background:#9c9; */
+    }
+    #sidebar {
+    float:right;
+  /*  width:250px; */
+    width:80%;
+    padding: 0;
+   /* background:#c9c; */
+    background-color: #f0f0f0;
+    }
+
+    #nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    }
+    #nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+    }
+    h1 {
+margin:0;
+}
+h2 {
+margin:0 0 1em;
+}
+#footer p {
+margin:0;
+}
+#notice {
+  color: #000 !important;
+  border: 1px solid;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+
+

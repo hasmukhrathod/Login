@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Pharmaceutical E-commerce </title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="wrap">
+    <div id="header">
+      <h1> <center> Pharamaceutical Ecommerce.<center> </h1>
+    </div>
+    <div id="nav">
+      <ul>
+	<li> <%= link_to 'Sign In', log_in_path %>  </li>
+	<li> <%= link_to 'New User?', new_user_path %>  </li>
+      </ul>
+    </div>
+    <div id="main">
+      <h2>Column 1</h2>
+      <h2>Main Content</h2>
+      <% if session[:user_id] %>
+        Logged in as <%= current_user.first_name %>.<br>
+        <%= link_to "Change Password - in progress", change_path(current_user.id) %>
+	<li><%= link_to 'Logout', log_out_path %> </li>
+      <% end %>
+    </div>
+    <div id="sidebar">
+      <% if flash[:alert] %>
+	<p id="notice"><%= flash[:alert] %></p>
+      <% end %>
+      <%= yield %>
+      
+    </div>
+    <div id="footer">
+      <p>Footer</p>
+    </div>
+   </div>
+
+
+
+
+
+</body>
+</html>
