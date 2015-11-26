@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   skip_before_action :authorize, only: [:new, :create]
+  before_action :admin_user, only: :destroy
   def new
    
   end
@@ -47,6 +48,11 @@ def update
   def index
     @users = User.paginate(page: params[:page])
   end
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
   
   
  
@@ -57,5 +63,9 @@ def update
     
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
+  
+  def admin_user
+      redirect_to ("/") unless current_user.admin?
+    end
 
 end
