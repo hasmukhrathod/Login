@@ -22,8 +22,8 @@
       <h2>Column 1</h2>
       <h2>Main Content</h2>
       <% if session[:user_id] %>
-        Logged in as <u> <%= current_user.first_name %> <u><br>
-        <%= link_to "Profile", user_path(current_user) %> <br>
+        Hello,  <%= link_to current_user.first_name, user_path(current_user) %> <u><br>
+        <%= link_to "Edit Profile", edit_user_path(current_user) %> <br>
        <!-- <%= link_to "Edit Profile", edit_user_path(current_user) %> <br>
         <%= link_to "Change Password", change_path(current_user.id) %><br> -->
 	<li><%= link_to 'Logout', log_out_path %> </li>
