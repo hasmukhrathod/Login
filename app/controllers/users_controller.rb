@@ -7,6 +7,7 @@ class UsersController < ApplicationController
       
     @user = User.new(user_params)
     if @user.save
+      UserMailer.welcome_email(@user).deliver	#Sending mail on signup.
       flash[:notice] = "Welcome to your Dashboard!"
       redirect_to "/"
     else
@@ -27,10 +28,9 @@ def update
     else
       flash[:notice] = "Sorry!"
       redirect_to "/"
-      end
-    
+      end    
   end
-  
+ 
   
   
   private
