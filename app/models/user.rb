@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   validates :first_name, :last_name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create },length: { maximum: 255 }
-  validates :password, presence: true
+  validates :password, presence: true, length: 6..16
   
   #To persist one in memory long enough to generate a password hash, we need to allow password as an attribute on User, even if only temporarily.
   attr_accessor :password, :reset_token
