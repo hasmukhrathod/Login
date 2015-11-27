@@ -5,10 +5,10 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => 'Thinkbiz',
-  :password => 'sendgrid021115',
-  :domain => 'thinkbiz.com',
-  :address => 'smtp.sendgrid.net',
+  :user_name => '',
+  :password => '',
+  :domain => 'Thinkbiz',
+  :address => 'smtp.gmail.com',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true

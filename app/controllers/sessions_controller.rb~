@@ -17,7 +17,8 @@ class SessionsController < ApplicationController
       redirect_to user_path(current_user), notice: 'Welcome to your Dashboard.'
     else
       #whoops, either the user wasn't in the database or their password is incorrect, so let them know, then redirect them back to the log in page
-      redirect_to log_in_path, notice: 'There was a problem logging you in.'
+      flash[:alert] = "There was a problem logging you in."
+      redirect_to log_in_path
     end
   end
  

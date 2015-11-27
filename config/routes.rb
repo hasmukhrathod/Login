@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
  
+  #get 'password_resets/new'
+
+  #get 'password_resets/edit'
+
   #get 'home/index'
   get '/' => 'home#index'
   get 'change' => "users#change_password"
   resources :users
+  resources :password_resets, only: [:new, :create, :edit, :update]
   get "/log-in" => "sessions#new"
   post "/log-in" => "sessions#create"
   get "/log-out" => "sessions#destroy", as: :log_out

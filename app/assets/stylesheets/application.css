@@ -21,6 +21,9 @@ body,html {
  /*background:#a7a09a; */
 }
 
+
+
+
 #wrap {
  /*width:750px; */
  width:100%;
@@ -29,23 +32,21 @@ body,html {
 /* background:#99c; */
 }
 
-    #header {
+#header {
     padding:5px 10px;
     background:#ddd;
     }
-    #nav {
+#nav {
     padding:5px 10px;
     background:#c99;
     }
     
-    #footer {
+#footer {
     clear:both;
     padding:5px 10px;
     background:#cc9;
     }
-
-
-    #main {
+#main {
     float:left;
   /*  width:500px; */
     width:20%;
@@ -53,7 +54,7 @@ body,html {
     background-color: #f0f0f0;
    /* background:#9c9; */
     }
-    #sidebar {
+#sidebar {
     float:right;
   /*  width:250px; */
     width:80%;
@@ -62,17 +63,17 @@ body,html {
     background-color: #f0f0f0;
     }
 
-    #nav ul {
+#nav ul {
     margin:0;
     padding:0;
     list-style:none;
     }
-    #nav li {
+#nav li {
     display:inline;
     margin:0;
     padding:0;
     }
-    h1 {
+h1 {
 margin:0;
 }
 h2 {
@@ -81,14 +82,32 @@ margin:0 0 1em;
 #footer p {
 margin:0;
 }
+
+
 #notice {
-  color: #000 !important;
-  border: 1px solid;
-  padding: 1em;
-  margin-bottom: 1em;
-  background-color: #f0f0f0;
-  font: bold smaller sans-serif;
+  color: green;
 }
 
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
 
-
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
