@@ -30,6 +30,9 @@ body,html {
  margin:0 auto;
  background-color: #f0f0f0;
  border: 2px solid red;
+ height: auto; 
+ min-height: 100%;
+
 /* background:#99c; */
 }
 
@@ -43,40 +46,6 @@ body,html {
     background:#c99;
     border: 2px solid black;
     }
-    
-#footer {
-    clear:both;
-    padding:5px 10px;
-    background:#cc9;
-    border: 2px solid black;
-    }
-#main {
-    float:left;
-  /*  width:500px; */
-    width:19%;
-    padding:0;
-    background-color: #f0f0f0;
-    background:#9c9;
-    border: 2px solid red;
-    }
-#sidebar {
-    float:right;
-  /*  width:250px; */
-    width:20%;
-    padding: 0;
-    background:#c9c; 
-    background-color: #f0f0f0;
-    border: 2px solid green;
-    }
-#lastbar {
-    float:right; 
-  /*  width:250px; */
-    width:60%;
-    padding: 0;
-    background:#c9c; 
-    background-color: #f0f0f0;
-    border: 2px solid black;
-    }
 #nav ul {
     margin:0;
     padding:0;
@@ -87,6 +56,77 @@ body,html {
     margin:0;
     padding:10px 20px;
     }
+    
+
+footer{
+ font-weight: bold;
+ height: auto;
+ padding:1px 15px 1px 20px;
+ clear:both;
+ border: 2px solid green;
+ background:#cc9;
+}
+
+#f1{
+float:left;
+width:18%;
+}
+
+#f2{
+ float:left;
+width:18%;
+  }
+
+#f3{
+ float: left;   
+width:18%;
+}
+
+#f4{
+float:left;
+width:18%;
+/* border: 1px solid black; */
+
+}
+
+#f5{
+float:left;
+width:18%;
+/* border: 1px solid black; */
+
+}
+
+
+
+#main {
+    float:left;
+  /*  width:500px; */
+    width:19%;
+    padding:0;
+    background-color: #f0f0f0;
+    background:#9c9;
+    border: 2px solid red;
+    }
+#sidebar {
+    
+    float:right;
+  /*  width:250px; */
+    width:60%;
+    padding: 0;
+    background:#c9c; 
+    background-color: #f0f0f0;
+    border: 2px solid green;
+    }
+#lastbar {
+    float:right; 
+  /*  width:250px; */
+    width:20%;
+    padding: 0;
+    background:#c9c; 
+    background-color: #f0f0f0;
+    border: 2px solid black;
+    }
+
 h1 {
 margin:0;
 }
@@ -104,7 +144,7 @@ margin:0;
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  /* background-color: green; */
   display: table;
 }
 
