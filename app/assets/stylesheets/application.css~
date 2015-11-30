@@ -62,7 +62,7 @@ body,html {
 #sidebar {
     float:right;
   /*  width:250px; */
-    width:60%;
+    width:20%;
     padding: 0;
     background:#c9c; 
     background-color: #f0f0f0;
@@ -71,7 +71,7 @@ body,html {
 #lastbar {
     float:right; 
   /*  width:250px; */
-    width:20%;
+    width:60%;
     padding: 0;
     background:#c9c; 
     background-color: #f0f0f0;

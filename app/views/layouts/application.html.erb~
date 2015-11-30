@@ -3,6 +3,9 @@
 <head>
   <title> Pharmaceutical E-commerce </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'animate-custom' %>
+  <%= stylesheet_link_tag    'demo' %>
+  <%= stylesheet_link_tag    'style' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,16 +13,26 @@
 
   <div id="wrap">
     <div id="header">
+	
       <h1> <center> Pharamaceutical Ecommerce.<center> </h1>
     </div>
-    <% unless session[:user_id] %>
+    
     <div id="nav">
       <ul>
+	<li> <%= link_to 'Department', log_in_path %>  </li>
+	<li> <%= link_to 'Brand', log_in_path %>  </li>
+	<li> <%= link_to 'Health concern', log_in_path %>  </li>
+	<li> <%= link_to 'Specialty', log_in_path %>  </li>
+	<li> <%= link_to 'Goal', log_in_path %>  </li>
+	<li> <%= link_to 'Ingredient', log_in_path %>  </li>
+	<li> <%= link_to 'Deals', log_in_path %>  </li>
+	<% unless session[:user_id] %>
 	<li> <%= link_to 'Sign In', log_in_path %>  </li>
 	<li> <%= link_to 'New User?', new_user_path %>  </li>
-      </ul>
+       </ul>
+	<% end %>
     </div>
-    <% end %>
+    
     <div id="main">
       <h2>Column 1</h2>
       <h2>Main Content</h2>
@@ -36,9 +49,11 @@
       <% end %>
     </div>
     <div id="sidebar">
-            
-      <%= yield %>
-      
+    <h1> "Hello" </h1>
+    </div>
+    <div id="lastbar">
+	
+     <%= yield %>
     </div>
     <div id="footer">
       <p>Footer</p>

@@ -1,31 +1,50 @@
+<div class="container">
+	<section>
+		<div id="container_demo" >
+			<div id="wrapper">
+				<div id="login" class="animate form">
+					<p id="notice"><%= notice %></p>
+						<h1>Sign UP</h1>
+					<%=form_for @user do |f| %>
+						<% if @user.errors.any? %>
+    							<div id="error_explanation">
+      								<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      								<ul>
+      									<% @user.errors.full_messages.each do |message| %>
+				        					<li><%= message %></li>
+      									<% end %>
+     								</ul>
+ 							</div>
+  						<% end %>
+						<p>
+							<label for="first_name" class="uname" data-icon="u">Your First Name*</label>   
+		   					<%=f.text_field :first_name, placeholder:  'First name' %> 
+						</p>
+						<p>
+							<label for="last_name" class="uname" data-icon="u">Your Last Name*</label>   
+		   					<%=f.text_field :last_name, placeholder:  'Last name' %> 
+						</p>
+						<p>
+							<label for="email" class="youmail" data-icon="e" > Your email*</label>
+							<%=f.text_field :email, placeholder:  'ex: myemail@mail.com' %>
+							</p>
+						<p>
+							<label for="password" class="youpasswd" data-icon="p">Your password* </label>
+							<%=f.password_field :password, placeholder:  'password must be at least 6 characters' %> 
+						</p>
+						<p>
+							<label for="password_confirm" class="youpasswd" data-icon="p">Please confirm your password* </label>
+    	
+							<%=f.password_field :password_confirmation %><br>
+						</p>
+						 <p class="signin button"> 
+							<input type="submit" value="Sign up"/> 
+						</p>
+    					<%end%>
+					<p class="change_link"> Already a member ? <%= link_to 'Log in', log_in_path, class: 'to_register' %></p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
-    <h1>Sign Up</h1>
-
-    
-
-    <%=form_for @user do |f| %>
-     <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-   
-    <%=f.label :first_name %> 
-    <%=f.text_field :first_name %><br>
-    <%=f.label :last_name %>
-    <%=f.text_field :last_name %><br>
-    <%=f.label :email %>
-    <%=f.text_field :email %><br>
-    <%=f.label :password %>
-    <%=f.password_field :password %><br>
-    <%=f.label :password_confirmation %>
-    <%=f.password_field :password_confirmation %><br>
-    <%=f.submit "Sign Up" %>
-    <%end%>

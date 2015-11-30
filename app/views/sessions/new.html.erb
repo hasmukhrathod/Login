@@ -1,10 +1,31 @@
-<p id="notice"><%= notice %></p>
 
-    <h1>Log In</h1> <br>
-    <%=form_tag log_in_path do%>
-    <%=label_tag :'Email' %>
-    <%=text_field_tag :email %> <br>
-    <%=label_tag :password %>
-    <%=password_field_tag :password %><br>
-    <%=submit_tag "Log in" %> <%= link_to "(forgot password)", new_password_reset_path %>
-    <%end%>
+<div class="container">
+<section>				
+	<div id="container_demo" >
+	 
+		<div id="wrapper">
+                        <div id="login" class="animate form">
+				<p id="notice"><%= notice %></p>
+					<h1>Log In</h1>
+					<%=form_tag log_in_path autocomplete="on" do%> 
+					<p>
+						<label for="email" class="uname" data-icon="u" > Your Email </label>
+			        		<%= email_field(:user, :email, placeholder: 'ex: you@vitaminocean.com') %>
+						
+					</p>
+					<p>
+						<label for="password" class="youpasswd" data-icon="p"> Your password </label>	
+						<%= link_to "(forgot password)", new_password_reset_path %>  
+						<%= password_field(:user, :password, placeholder: 'XXXXXX') %>
+					</p>
+					<p class="login button">
+						<%=submit_tag "Log in" %>  
+					</p>
+					<%end%>
+	                                <p class="change_link">	Not a member yet ? <%= link_to 'Join us', new_user_path, class: 'to_register' %> </p>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+

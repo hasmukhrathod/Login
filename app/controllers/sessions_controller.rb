@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     #try to authenticate the user - if they authenticate successfully, an instance of the User model is returned
-    @user = User.authenticate(params[:email], params[:password])
+    @user = User.authenticate(params[:user][:email], params[:user][:password])
     #if an instance is returned and @user is not nil...
     if @user
       #let the user know they've been logged in with a flash message
